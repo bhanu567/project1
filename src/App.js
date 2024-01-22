@@ -1,21 +1,21 @@
 import React, {useState} from "react";
 import "./App.css";
-import Form from "./component/Form";
-import Display from "./component/Display";
+import AddUser from "./component/AddUser";
+import UsersList from "./component/UsersList";
 
 function App() {
   const[display, setDisplay]=useState(false);
-  const [data, setData] = useState([]);
-  const isDisplay =(datas)=>{
-    setData((data)=>{
-      return [...data, datas];
+  const [usersList, setUsersList] = useState([]);
+  const addNewUser =(newUser)=>{
+    setUsersList((prevUser)=>{
+      return [...prevUser, newUser];
     })
     setDisplay(true);
   }
   return (
     <div className="App">
-      <Form Submit={isDisplay}/>
-      {display?(<Display Data={data}/>):null}
+      <AddUser onAddNewUserHandler={addNewUser}/>
+      {display?(<UsersList usersData={usersList}/>):null}
     </div>
   );
 }
