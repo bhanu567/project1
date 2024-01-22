@@ -3,6 +3,7 @@ import React from "react";
 import classes from "./ErrorModal.module.css";
 
 //Remember: in HTML, we include multiple classes like this <article class="class1 class2"> 
+//you can also write classes = classes.modal+" "+classes.card (gap b/w the class name must be there)
 
 const ErrorModal = (props) => {
   return (
