@@ -1,5 +1,5 @@
 import React from "react";
-import { ReactDOM } from "react";
+import ReactDOM from "react-dom";
 import classes from "./ErrorModal.module.css";
 
 //Remember: in HTML, we include multiple classes like this <article class="class1 class2">

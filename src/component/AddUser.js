@@ -24,7 +24,7 @@ const AddUser = (props) => {
         message: "Please Enter a valid name and age (non-empty values).",
       });
       return;
-    } else if (+enteredAge <= 0) {
+    } else if (+enteredAge <= 0 || enteredAge === null) {
       setError({
         title: "Invalid Age",
         message: "Please Enter a valid age > 0",
@@ -77,7 +77,7 @@ const AddUser = (props) => {
         <input
           id="college_name"
           type="text"
-          ref={ageInputRef}
+          ref={collegeInputRef}
           // value={enteredAge}
           // onChange={(e) => setEnteredAge(e.target.value)}
         ></input>
